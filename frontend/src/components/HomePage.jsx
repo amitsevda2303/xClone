@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Feature from './Home/Feature'
+import s from "../Styles/HomePage.module.css"
 
 
 const HomePage = () => {
@@ -13,7 +15,9 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div style={{width:"100vw",height:"100vh",backgroundColor:"black",color:"white"}}>HomePage</div>
+    <div className={s.HomePageLayout} style={{width:"100vw",height:"100vh",backgroundColor:"black",color:"white"}}>
+      
+      <Feature/></div>
   )
 }
 
