@@ -3,8 +3,10 @@ import s from "../../Styles/Step4.module.css";
 import { Mycontext } from "../../context/Mycontext";
 import svg from "../../assets/svg.svg";
 import EditModal from "../EditModal";
+import { useNavigate } from "react-router-dom";
 
 const Step4 = () => {
+  const navigate = useNavigate()
   const {
     loading2,
     closeModal,
@@ -122,11 +124,17 @@ const Step4 = () => {
     });
 
     const response = await result.json();
-    const token = response.authToken
-    localStorage.setItem("User",token)
-    console.log(response);
 
-    setUserDetails({})
+    if (response.success) {
+      const token = response.authToken
+      localStorage.setItem("User",token)
+      navigate("/home")
+      closeModal()
+      setUserDetails({})
+    }else {
+      console.log("PLease login with correcrt credentials");
+    }
+
 
   };
 
