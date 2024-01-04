@@ -1,0 +1,451 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.modalBackdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(67, 84, 97, 0.041); /* Semi-transparent background */
+  }
+  
+  .modalContent {
+    position: relative;
+    background: #000000; /* White background for modal content */
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow for a subtle lift */
+    width: 31.5%;
+    height: 70%;
+    min-height: 70%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+
+.loadingSpan {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(18, 81, 208, 0.518);
+    border-bottom-color: #0099ff;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+    .loadingSpan{
+      position: absolute;
+    top: 45%;
+  transform: translate(0, -40%);
+    }
+
+.topRow{
+    padding-inline: 20px;
+    width: 100%;
+    height:10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.imgDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    width: 95%;
+}
+.imgDiv>img{
+    
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
+}
+
+.middleRow{position: relative;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+}
+
+.bottomRow{
+    background-color: black;
+    width: 100%;
+    height: 20%;
+}
+
+.divContainer{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto ;
+    border-bottom-left-radius: 16px;
+}
+
+
+
+.mainFormDiv{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 70px;
+    margin-bottom: 50px;
+  }
+
+  .mainFormDiv>h4{
+    padding-bottom: 20px;
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .inputDiv{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+
+  
+  /* .inputDiv>input{
+    width: 100%;
+    border-radius: 6px;
+    background: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.314);
+    font-size: 17px;
+    color: white;
+    letter-spacing: 1px;
+  } */
+
+
+
+
+  .styledInputDiv{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    border: 1px solid  rgba(128, 128, 128, 0.314) ;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  .styledInputDiv>.input1{
+    position: absolute;
+    bottom: 0%;
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background: transparent;
+    font-size: 17px;
+    color: white;
+    letter-spacing: 1px;
+    padding-block: 40px;
+  }
+  .input1:focus{
+    outline: none;
+  }
+  .label1{
+    position: absolute;
+    top: 30%;
+    left: 11px;
+    font-size: 17px;
+    color: grey;
+    transition: .3s ease-out;
+  }
+
+
+
+  .input1:focus ~ .label1{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 14px;
+    color: rgb(120,122,122);
+  }
+
+  .input1:not(:placeholder-shown) ~ .label1,
+  .input1:not(:empty) ~ .label1{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 14px;
+    color: rgb(120,122,122);
+
+  }
+
+
+
+
+
+
+
+  
+
+
+  .firstPart{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+
+  .closeBtn{
+    position: relative;
+    margin-top: 2px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+  }
+
+
+  .backButton{
+    position: relative;
+    margin-top: 5px;
+    margin-left: 8px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+  }
+
+  .backButton{
+    text-align: center
+  }
+  .backButton>i{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .backButton:hover{
+    transition: .2s ease-in-out;
+    background-color: rgba(128, 128, 128, 0.307);
+    cursor: pointer;
+  }
+
+  .backButton::after{
+    position: absolute;
+    bottom:  -150%;
+    content: 'Back';
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgba(128, 128, 128, 0.656);
+    padding: 3px;
+    padding-inline: 4px;
+    text-align: center;
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transform: translateY(0); /* Initial position */
+   /* Delay appearance for 1 second */
+  }
+  .backButton:hover::after{
+    letter-spacing: 1px;
+    opacity: 1; /* Make the content visible */
+    transform: translateY(-100%); /* Move the content into view */
+  }
+ 
+
+  .closeBtn>i{
+    text-align: center;
+    font-size: 18px;
+    
+  }
+
+  .closeBtn:hover{
+    transition: .2s ease-in-out;
+    background-color: rgba(128, 128, 128, 0.307);
+    cursor: pointer;
+  }
+
+
+  .closeBtn::after {
+    position: absolute;
+    bottom:  -150%;
+    content: 'Close';
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgba(128, 128, 128, 0.656);
+    padding: 3px;
+    padding-inline: 4px;
+    text-align: center;
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transform: translateY(0); /* Initial position */
+   /* Delay appearance for 1 second */
+  }
+  
+
+
+  .closeBtn:hover::after{
+    opacity: 1; /* Make the content visible */
+  transform: translateY(-100%); /* Move the content into view */
+  }
+
+  
+
+
+  .firstPart>h5{
+    text-align: left;
+    width: 90%;
+    font-size: 20px;
+  }
+
+
+
+  .mainFormDiv>span{
+    font-size: 15px;
+    color: grey;
+    position: absolute;
+    top: 110px;
+  }
+  .mainFormDiv>h4{
+    margin-bottom: 50px;
+  }
+
+  
+  .nextBtn{
+    position: absolute;
+    bottom: 30px;
+    margin-left: 0px;
+    padding-inline: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nextBtn>button{
+    width: 92%;
+    padding-block:15px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .nextBtn>button:disabled{
+    color: black;
+    background-color: rgb(120,122,122);
+  }
+  
+
+  .askForAgain{
+    font-size: 14px;
+    color: #0099ff; 
+    text-decoration: none;     
+  }
+
+  .callforotp{
+    position: absolute;
+    bottom: -22px;
+    left: 10px;
+  }
+
+  .callforotp>a:hover{
+    text-decoration: underline;
+  }
+
+
+  .alert{
+    background-color: #0099ff;
+    padding: 10px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 40px;
+    font-size: 16px;
+
+  }
+
+
+
+
+  .mainFormDiv2{
+    position: absolute;
+    top: 70px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 70px;
+    margin-bottom: 50px;
+  }
+
+  .mainFormDiv2>span{
+    font-size: 16px;
+    color: grey;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .hideButtonDiv{
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+  }
+  .hideButtonDiv>i{
+    font-size: 13px;
+  }
+
+
+  .loadingSpan2 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(18, 81, 208, 0.518);
+    border-bottom-color: #0099ff;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation2 1s linear infinite;
+    }
+
+    @keyframes rotation2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+    .loadingSpan2{
+      position: absolute;
+    top: 300px;
+  transform: translate(0, -40%);
+    }

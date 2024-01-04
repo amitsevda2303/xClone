@@ -1,0 +1,106 @@
+.wallpaperBackground {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://wallpaperset.com/w/full/7/7/a/38882.jpg");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.loginForm {
+  width: auto;
+  height: auto;
+  padding-inline: 70px;
+  border: 5px solid white;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 32px 0 #ffffff;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+}
+input {
+  width: 100% ;
+  padding: 20px;
+  border-radius: 6px;
+  letter-spacing: 2px;
+  outline: none;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-size: 16px;
+  background: transparent;
+}
+
+input:focus{
+    transition: .3s ease-in-out;
+    border: 2px solid aqua;
+}
+
+.pushable {
+  margin-top: 10px;
+  width: 115%;
+  border-radius: 6px;
+  letter-spacing: 2PX;
+  border: 2px solid #ffffff;
+  font-size: 16px;
+  transition: .3s ease-in-out;
+  background: hsl(0, 0%, 19%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  margin-bottom: 50px;
+}
+.pushable:disabled>span{
+  cursor: no-drop;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.14);
+  outline: none;
+  border: none;
+  transition: .3s ease-in-out;
+} 
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: hsl(0, 0%, 52%);
+  color: white;
+  transition: .3s ease-in-out;
+  transform: translateY(-6px);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+
+
+
+
+
+.changer{
+  display: flex;
+  width: 100%;
+  justify-content:flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 30px;
+  text-transform: capitalize;
+  user-select: none;
+  font-size: 19px;
+  color: #ffffff;
+}
+
+.changer:hover{
+  transition: .2s ease;
+  /* transform: scale(1.02); */
+  text-decoration: underline;
+
+}

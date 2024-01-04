@@ -1,0 +1,368 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI";
+}
+
+.wallpaperBackground{
+    width: 100vw;
+    height: 100vh;
+    padding-right: 150px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+.image{
+  width: 60%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image>img{
+  margin-top: 15%;
+  height: 50%;
+  width: 50%;
+}
+
+.pageDetails{
+  padding-top:15%;
+  width: 40%;
+  height: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 8%;
+
+}
+
+.firstHeading{
+  font-size: 60px;
+  font-family: 'Segoe UI';
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+
+.secondHeading{
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.buttonsForInstantAccount{
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.instantBtn1 , .instantBtn2{
+  width: 42%;
+  padding-inline: 40px;
+  padding-block: 10px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: .2s ease;
+}
+
+.instantBtn1:hover{
+  transition: .2s ease;
+  background-color: rgb(232, 232, 232);
+}
+
+.instantBtn2{
+  font-weight: 700;
+}
+
+.instantBtn2:hover{
+  transition: .2s ease;
+  cursor: pointer;
+  background-color: #cecece;
+}
+
+.googleImage{
+  width: 20px;
+}
+
+.partition{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.hrTag{
+  width: 18.5%;
+  background-color: rgba(128, 128, 128, 0.426);
+  border: 1px solid rgba(73, 73, 73, 0.499);
+  height: 2px;
+}
+
+.or{
+  font-size: 16px;
+}
+
+
+.accountCreationDiv{
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accountBtn{
+  width: 42%;
+  background-color: #1D9BF0;
+  padding-inline: 40px;
+  padding-block: 10px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  color: white;
+  font-weight: 700;
+  transition: .2s ease;
+}
+
+.accountBtn:hover{
+  transition: .2s ease;
+  background-color: #1a8cd8;
+}
+
+/* .terms{
+  width: 42%;
+} */
+
+.accountCreationDiv>span{
+  margin-top: -5px;
+  width: 42%;
+  font-size: 11px;
+  color: rgb(105, 104, 104);
+}
+
+.links{
+  color: #1D9BF0;
+  text-decoration: none;
+}
+
+
+.doLogindiv{
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+.doLogindiv>p{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.LoginBtn{
+  width: 42%;
+  background-color: transparent;
+  padding-inline: 40px;
+  padding-block: 10px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid rgba(70, 70, 70, 0.773);
+  color:#1D9BF0;
+  font-weight: 700;
+  transition: .2s ease;
+}
+
+.LoginBtn:hover{
+  transition: .2s ease;
+  background: #1d9cf015;
+}
+
+
+.features{
+  width: 100%;
+  display: flex;
+  padding-left: 150px;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-top: 80px;
+  padding-bottom: 0px;
+}
+
+.anchorTags{
+  font-size: 14px;
+  color: grey;
+  text-decoration: none;
+}
+
+.anchorTags:hover{
+  text-decoration: underline;
+}
+
+
+button:hover{
+  cursor: pointer;
+}
+
+
+
+/* @media only screen and (max-width: 1600px) {
+  .wallpaperBackground {
+  }
+} */
+
+/* 
+.form{
+    border: 5px solid #ffffff;
+    width: auto;
+    height:auto;
+    padding: 50px;
+    display:grid ;
+    place-items: center;
+    gap: 20px;    
+    flex-direction: column;
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 8px 32px 0 #ffffff;
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.input{
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    letter-spacing: 2PX;
+    outline: none;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 16px;
+    background: transparent;
+}
+
+
+
+.changer{
+    display: flex;
+    width: 100%;
+    justify-content:flex-end;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 30px;
+    text-transform: capitalize;
+    user-select: none;
+    font-size: 19px;
+    color: #ffffff;
+}
+
+.changer:hover{
+    transition: .2s ease;
+    text-decoration: underline;
+
+}
+
+.input::placeholder {
+    color: #ffffff90;
+    opacity: 1; 
+  }
+
+
+  .pushable{
+    width: 110%;
+    border-radius: 6px;
+    letter-spacing: 2PX;
+    border: 2px solid #ffffff;
+    font-size: 16px;
+    transition: .3s ease-in-out;
+    background: hsl(0, 0%, 19%);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+
+  .pushable:disabled>span{
+    cursor: no-drop;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.14);
+    outline: none;
+    border: none;
+    transition: .3s ease-in-out;
+  }        
+
+  .anchorHandler{ 
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+
+  .loginButton{
+    color: rgb(63, 201, 255);
+    filter: drop-shadow(16px 16px 50px rgba(7, 203, 247, 0.552));
+    text-decoration: none;
+
+  
+  }
+  .loginButton:hover
+  {
+    text-decoration: underline;
+  }
+
+ 
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: hsl(0, 0%, 52%);
+    color: white;
+    transition: .3s ease-in-out;
+    transform: translateY(-6px);
+  }
+
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
+
+
+  .warningMessage{
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .input:focus{
+    transition:  .3s ease-in-out;
+    border: 2px solid aqua;
+  } */
