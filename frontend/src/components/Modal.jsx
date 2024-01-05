@@ -295,6 +295,7 @@ const Modal = () => {
                                 type="text"
                                 placeholder=" "
                                 id="input1"
+                                autoFocus 
                                 value={name}
                                 onChange={(e) => {
                                   setName(e.target.value);

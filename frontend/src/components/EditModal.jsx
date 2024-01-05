@@ -35,7 +35,7 @@ const EditModal = () => {
         <div className={s.procedure}>
           <h5>Verify Phone</h5>
           <p>
-          We'll text your verification code to {placeholder==="Phone"?mobile:email}. Standard SMS fees may            apply`
+          We'll text your verification code to {placeholder==="Phone"?mobile:email}. Standard SMS fees may apply
           </p>
           <button className={s.whiteBtn} onClick={gotStep4Func}>
             OK

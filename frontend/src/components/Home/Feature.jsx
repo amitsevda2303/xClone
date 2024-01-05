@@ -1,12 +1,36 @@
-import React, { useState } from 'react'
-import s from "../../Styles/Feature.module.css"
-import image from "../../assets/svg.svg"
-import user from "../../assets/pngegg.png"
+import React, { useEffect, useState } from 'react';
+import s from "../../Styles/Feature.module.css";
+import image from "../../assets/svg.svg";
+import user from "../../assets/pngegg.png";
+import ClickAwayListener from 'react-click-away-listener';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Feature = () => {
     const [logoutModal, setLogoutModal] = useState(false)
+    const navigate = useNavigate()
+    // const userToken = localStorage.getItem("User")
+  
+  
+    const setModalFunc = () =>{
+        setLogoutModal(true)
+    }
+    const closeLogoutFunc = () =>{
+        setLogoutModal(false)
+    }
+
+    const logoutpath =()=>{
+        navigate("/logout")
+    }
+
+    // useEffect(() => {
+    //     if (!userToken) {
+    //       navigate('/')
+    //     }
+    //   }, [logoutFunc]);
+
+    
   return (
     <div>
         <div className={s.container}>
@@ -104,11 +128,13 @@ const Feature = () => {
             <div className={s.PostContainer}>
                 <button>Post</button>
             </div>
+           {logoutModal?(<ClickAwayListener onClickAway={closeLogoutFunc}>
             <div className={s.logOutContainer}>
                     <span>add an existing account</span>
-                    <span>logout @aw43SE$asdasdr</span>
+                    <span onClick={logoutpath}>logout @aw43SE$asdasdr</span>
                 </div>
-            <div className={s.IdDetailContainer}>
+           </ClickAwayListener>):""}
+            <div className={s.IdDetailContainer} onClick={setModalFunc}>
                 
                 <div className={s.imageDiv}>
                     <img src={user} alt="" />

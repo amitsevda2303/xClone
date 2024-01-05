@@ -92,6 +92,7 @@
 }
 .IdDetailContainer:hover{
     background-color: rgba(128, 128, 128, 0.153);
+    cursor: pointer;
     
 }
 
@@ -124,14 +125,14 @@ height: 40px;
 .logOutContainer{
     z-index: 99;
     width: auto;
-    height: 100px;
+    height: 125px;
  background: black;
- padding-inline: 30px;
- padding-block: 15px;
+ /* padding-inline: 30px;
+ padding-block: 15px; */
  position: absolute;
  bottom: 100px;
  display: flex;
- gap: 15px;
+ gap: 10    px;
  align-items: center;
  justify-content: center;
  flex-direction: column;
@@ -141,3 +142,27 @@ height: 40px;
  filter: drop-shadow(0 0 0.89rem rgb(255, 255, 255, .2));
 }
 
+.logOutContainer>span{
+    font-size: 18px;
+    width: 280px;
+    padding: 10px;
+}
+
+.logOutContainer>span:hover{
+    cursor: pointer;
+}
+
+.logOutContainer>span:hover{
+    background-color: rgba(128, 128, 128, 0.153);
+}
+
+.logOutContainer::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    border-width: 0 20px 20px 0; /* Adjust these values to change triangle size/direction */
+    border-style: solid;
+    transform: rotate(135deg);
+    border-color: transparent black transparent transparent; /* Change color here */
+    filter: drop-shadow(0 0 0.89rem rgb(255, 255, 255, .2));
+  }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import s from "../Styles/Signup.module.css";
 // import {Link } from "react-router-dom"
 // import Typewriter from 'typewriter-effect';
@@ -7,6 +7,7 @@ import google from "../assets/google.svg"
 import apple from "../assets/apple.svg"
 import { Mycontext } from "../context/Mycontext";
 import Modal from "./Modal";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   // const [email, setEmail] = useState("");
@@ -83,6 +84,14 @@ const Signup = () => {
   // const handleBlur = () => {
   //   setIsFocused(false);
   // };
+  const navigate = useNavigate()
+  const userToken = localStorage.getItem("User")
+
+  useEffect(() => {
+    if (userToken) {
+      navigate('/home')
+    }
+  }, []);
   
 
   
