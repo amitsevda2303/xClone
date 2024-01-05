@@ -1,13 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-.container{
-    margin: 0;
-    padding: 0;
+.container {
     padding-left: 50px;
     display: flex;
     align-items: flex-start;
@@ -17,29 +15,129 @@
     border-right: 1px solid rgba(82, 81, 81, 0.412);
 }
 
-.image{
+.image {
     padding-left: 20px;
     width: 40px;
     height: 40px;
 }
 
-.image>img{
+.image>img {
     width: 30px;
     height: 30px;
 }
 
-.feature{
+.feature {
+    text-align: left;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; /* Use 100% width for flexibility */
     gap: 20px;
     padding: 15px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 50px;
 }
-.feature>span{
+
+.feature>span {
+    flex-grow: 1; /* Use flex-grow for flexibility */
     font-size: 20px;
 }
 
-.feature:hover{
+.feature:hover {
     cursor: pointer;
     background-color: rgba(128, 128, 128, 0.153);
     border-radius: 50px;
 }
+
+.icon {
+    width: 30px; /* Adjust based on your design */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon>i {
+    text-align: left;
+    font-size: 22px;
+}
+
+.PostContainer{
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 30px;
+
+}
+.PostContainer>button{
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    width: 100%;
+    padding-block: 13px;
+    background-color: #1D9BF0;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.IdDetailContainer{
+    position: absolute;
+    width: 250px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;    
+    gap: 15px;
+    padding: 15px;
+    border-radius: 50px;
+}
+.IdDetailContainer:hover{
+    background-color: rgba(128, 128, 128, 0.153);
+    
+}
+
+.imageDiv{
+width: 40px;
+height: 40px;
+}
+
+.imageDiv>img{
+    width: 40px;
+    height: 40px;
+}
+.userDetails{
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+}
+.userDetails>span{
+    font-size: 16px;
+}
+
+.threeDot{
+    font-size: 22px;
+}
+
+.lightSpan{
+    color: grey;
+}
+
+.logOutContainer{
+    z-index: 99;
+    width: auto;
+    height: 100px;
+ background: black;
+ padding-inline: 30px;
+ padding-block: 15px;
+ position: absolute;
+ bottom: 100px;
+ display: flex;
+ gap: 15px;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ font-size: 20px;
+ border-radius: 16px;
+ border: 1px solid rgba(255, 255, 255, 0.147);
+ filter: drop-shadow(0 0 0.89rem rgb(255, 255, 255, .2));
+}
+

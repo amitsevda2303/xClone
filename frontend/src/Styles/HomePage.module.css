@@ -7,4 +7,8 @@
 .HomePageLayout{
     width: 100vw;
     height: 100vh;
+    padding-top: 10px;
+    padding-inline: 270px;
+    overflow-y: hidden;
 }
+

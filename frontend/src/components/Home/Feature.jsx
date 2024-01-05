@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import s from "../../Styles/Feature.module.css"
 import image from "../../assets/svg.svg"
+import user from "../../assets/pngegg.png"
+
 
 
 const Feature = () => {
+    const [logoutModal, setLogoutModal] = useState(false)
   return (
     <div>
         <div className={s.container}>
@@ -12,7 +15,7 @@ const Feature = () => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <i class="fa-solid fa-house"></i>
+                <div className={s.icon}><i class="fa-solid fa-house"></i></div>
                 <span>
                     Home
                 </span>
@@ -20,7 +23,7 @@ const Feature = () => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <i class="fa-solid fa-house"></i>
+                    <div className={s.icon}> <i class="fa-solid fa-magnifying-glass"></i></div>
                 <span>
                     Explore
                 </span>
@@ -28,7 +31,7 @@ const Feature = () => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <i class="fa-solid fa-house"></i>
+                <div className={s.icon}><i class="fa-solid fa-bell"></i></div>
                 <span>
                     Notifications
                 </span>
@@ -36,7 +39,7 @@ const Feature = () => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <i class="fa-solid fa-house"></i>
+                <div className={s.icon}><i class="fa-regular fa-envelope"></i></div>
                 <span>
                     Messages
                 </span>
@@ -44,15 +47,7 @@ const Feature = () => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <i class="fa-solid fa-house"></i>
-                <span>
-                    Home
-                </span>
-                </div>
-            </div>
-            <div className={s.featuresContainer}>
-                <div className={s.feature}>
-                <i class="fa-solid fa-house"></i>
+                <div className={s.icon}><i class="fa-regular fa-square-check fa-rotate-180"></i></div>
                 <span>
                     Grok
                 </span>
@@ -60,7 +55,39 @@ const Feature = () => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <i class="fa-solid fa-house"></i>
+                <div className={s.icon}><i class="fa-regular fa-rectangle-list"></i></div>
+                <span>
+                    Lists
+                </span>
+                </div>
+            </div>
+            <div className={s.featuresContainer}>
+                <div className={s.feature}>
+               <div className={s.icon}> <i class="fa-regular fa-bookmark"></i></div>                
+                <span>
+                    Bookmarks
+                </span>
+                </div>
+            </div>
+            <div className={s.featuresContainer}>
+                <div className={s.feature}>
+                <div className={s.icon}><i class="fa-solid fa-user-group"></i></div>
+                <span>
+                    Communities
+                </span>
+                </div>
+            </div>
+            <div className={s.featuresContainer}>
+                <div className={s.feature}>
+                <div className={s.icon}><i class="fa-solid fa-house"></i></div>
+                <span>
+                    Premium
+                </span>
+                </div>
+            </div>
+            <div className={s.featuresContainer}>
+                <div className={s.feature}>
+                <div className={s.icon}><i class="fa-regular fa-user"></i></div>
                 <span>
                     Profile
                 </span>
@@ -68,7 +95,7 @@ const Feature = () => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <i class="fa-solid fa-house"></i>
+                <div className={s.icon}><i class="fa-regular fa-comment-dots"></i></div>
                 <span>
                     More
                 </span>
@@ -77,9 +104,22 @@ const Feature = () => {
             <div className={s.PostContainer}>
                 <button>Post</button>
             </div>
-
+            <div className={s.logOutContainer}>
+                    <span>add an existing account</span>
+                    <span>logout @aw43SE$asdasdr</span>
+                </div>
             <div className={s.IdDetailContainer}>
-                nothing
+                
+                <div className={s.imageDiv}>
+                    <img src={user} alt="" />
+                </div>
+                <div className={s.userDetails}>
+                    <span>name &nbsp; &nbsp;<i class="fa-solid fa-lock"></i></span>
+                    <span className={s.lightSpan}>@aw43SE$asdasdr</span>
+                </div>
+                <div className={s.threeDot}>
+                <i class="fa-solid fa-ellipsis"></i>
+                </div>
             </div>
         </div>
       
