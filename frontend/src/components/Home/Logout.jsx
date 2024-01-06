@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import s from "../../Styles/Modal.module.css"
 import { useNavigate } from 'react-router-dom'
 import style from "../../Styles/EditModal.module.css"
@@ -6,6 +6,7 @@ import ClickAwayListener from 'react-click-away-listener'
 
 const Logout = () => {
     const navigate = useNavigate()
+    let user =  localStorage.getItem("User")
     const backTohome = () =>{
         navigate('/home')
     }
@@ -13,6 +14,12 @@ const Logout = () => {
         localStorage.removeItem("User")
         navigate('/')
     }
+    useEffect(() => {
+        if (!user) {
+            navigate("/")            
+        }
+    }, [])  
+    
   return (
     <div className={s.blackbg}>
         <div className={s.modalBackdrop}>

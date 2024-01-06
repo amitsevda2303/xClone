@@ -1,5 +1,9 @@
 const mongoose = require('mongoose')
-const mongoURL = 'mongodb+srv://rohit:rohit@login.nhevlq2.mongodb.net/'
+const dotenv = require('dotenv')
+dotenv.config()
+
+const mongoURL = process.env.MONGOURI
+
 
 
 const connectToMongo = async() =>{
