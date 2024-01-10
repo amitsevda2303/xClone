@@ -7,11 +7,11 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const Feature = () => {
+const Feature = (props) => {
     const [logoutModal, setLogoutModal] = useState(false)
     const navigate = useNavigate()
     // const userToken = localStorage.getItem("User")
-  
+    const { name } = props.userDetails;
   
     const setModalFunc = () =>{
         setLogoutModal(true)
@@ -140,7 +140,7 @@ const Feature = () => {
                     <img src={user} alt="" />
                 </div>
                 <div className={s.userDetails}>
-                    <span>name &nbsp; &nbsp;<i class="fa-solid fa-lock"></i></span>
+                    <span>{name} &nbsp; &nbsp;<i class="fa-solid fa-lock"></i></span>
                     <span className={s.lightSpan}>@aw43SE$asdasdr</span>
                 </div>
                 <div className={s.threeDot}>
