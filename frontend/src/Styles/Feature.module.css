@@ -42,6 +42,7 @@
 .feature>span {
     flex-grow: 1; /* Use flex-grow for flexibility */
     font-size: 20px;
+    font-weight: 500;
 }
 
 .feature:hover {
