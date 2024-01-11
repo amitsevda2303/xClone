@@ -12,10 +12,31 @@
     overflow-y: hidden;
     display: flex;
     flex-direction: row;
+    overflow-y: scroll;
+}
+
+@media  screen and (min-width: 2100px) {
+    .HomePageLayout{
+        padding-inline: 270px;
+    }
+}
+
+@media screen and (max-width: 1950px) {
+    .HomePageLayout{
+        padding-inline: 20px;
+    }
+}
+@media screen and (max-width: 1450px) {
+    .HomePageLayout{
+        padding-inline: 5px;
+    }
 }
 
 
 .middleContainer{
-    width: 45%;
+    width:800px;
+    height: 190vh;
     border-right: 1px solid rgba(144, 143, 143, 0.52);
+    border-left: 1px solid rgba(144, 143, 143, 0.52);
+    
 }

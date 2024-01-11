@@ -12,7 +12,24 @@
     width: 325px;
     height: 100vh;
     flex-direction: column;
-    border-right: 1px solid rgba(82, 81, 81, 0.412);
+    
+}
+
+@media screen and (max-width: 1450px) {
+    .container{
+        padding-left: 5px;
+    }
+}
+@media screen and (max-width: 1350px) {
+    .feature>span{
+    display: none;
+    }
+    /* .PostContainer{
+    
+    } */
+    .container {
+        width:80px
+    }
 }
 
 .image {

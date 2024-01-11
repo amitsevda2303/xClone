@@ -11,6 +11,7 @@ const Feature = (props) => {
     const [logoutModal, setLogoutModal] = useState(false)
     const navigate = useNavigate()
     const { name } = props.userDetails;
+    const {setProfile} = props;
   
     const setModalFunc = () =>{
         setLogoutModal(true)
@@ -21,6 +22,10 @@ const Feature = (props) => {
 
     const logoutpath =()=>{
         navigate("/logout")
+    }
+
+    const changeHome = () =>{
+        setProfile(true);
     }
 
     
@@ -103,7 +108,7 @@ const Feature = (props) => {
                 </div>
             </div>
             <div className={s.featuresContainer}>
-                <div className={s.feature}>
+                <div className={s.feature} onClick={changeHome}>
                 <div className={s.icon}><i className="fa-regular fa-user"></i></div>
                 <span>
                     Profile

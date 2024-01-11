@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Feature from './Home/Feature'
 import s from "../Styles/HomePage.module.css"
 import { useQuery ,gql} from '@apollo/client'
+import Profile from './Home/Profile'
 
 const getData = gql`
 query GetUserDetails($token: String!) {
@@ -14,6 +15,7 @@ query GetUserDetails($token: String!) {
 `
 
 const HomePage = () => {
+  const [profile, setProfile] = useState(false)
   const navigate = useNavigate()
   const userToken = localStorage.getItem("User")
 
@@ -40,10 +42,12 @@ console.log(userToken)
   }
 
   const userDetails = data.getdetails;
+
   return (
     <div className={s.HomePageLayout} style={{width:"100vw",height:"100vh",backgroundColor:"black",color:"white"}}>
-      <Feature userDetails={userDetails}/>
-      <div className={s.middleContainer}>sadflkj</div>
+      <Feature setProfile={setProfile} userDetails={userDetails} />
+      <div className={s.middleContainer}>{profile
+      ?<Profile setProfile={setProfile}/>:"amit sevda"}</div>
       
       </div>
   )
