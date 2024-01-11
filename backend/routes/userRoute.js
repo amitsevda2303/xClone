@@ -12,8 +12,6 @@ dotenv.config();
 router.post('/setuserinfo', newUserCheck, async (req, res) => {
     try {
         const secret =  process.env.JWTSECERET;
-        console.log("req.body",req.body)
-        console.log(secret)
         const errors = validationResult(req);
         const { email, mobile, name, password, dob } = req.body;
         const parsedDob = new Date(dob);

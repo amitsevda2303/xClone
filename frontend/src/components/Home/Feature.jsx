@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import s from "../../Styles/Feature.module.css";
 import image from "../../assets/svg.svg";
 import user from "../../assets/pngegg.png";
@@ -10,7 +10,6 @@ import { useNavigate } from 'react-router-dom';
 const Feature = (props) => {
     const [logoutModal, setLogoutModal] = useState(false)
     const navigate = useNavigate()
-    // const userToken = localStorage.getItem("User")
     const { name } = props.userDetails;
   
     const setModalFunc = () =>{
@@ -23,12 +22,6 @@ const Feature = (props) => {
     const logoutpath =()=>{
         navigate("/logout")
     }
-
-    // useEffect(() => {
-    //     if (!userToken) {
-    //       navigate('/')
-    //     }
-    //   }, [logoutFunc]);
 
     
   return (

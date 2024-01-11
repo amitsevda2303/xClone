@@ -42,8 +42,10 @@ console.log(userToken)
   const userDetails = data.getdetails;
   return (
     <div className={s.HomePageLayout} style={{width:"100vw",height:"100vh",backgroundColor:"black",color:"white"}}>
+      <Feature userDetails={userDetails}/>
+      <div className={s.middleContainer}>sadflkj</div>
       
-      <Feature userDetails={userDetails}/></div>
+      </div>
   )
 }
 

@@ -14,7 +14,6 @@ const server = new ApolloServer({
     mobile: String
     email: String
     dob: String!
-    password: String!
   }
        type Query{
         getdetails(token:String):User
@@ -25,13 +24,12 @@ const server = new ApolloServer({
      getdetails:async(_, req) => {
       try {
           const {token}=req;
-    console.log(token)
 
           // Verify the token
           const decoded = jwt.verify(token, SECERET);
 
           // Get user details from the database using the decoded user ID
-          const user = await User.findById(decoded._id);
+          const user = await User.findById(decoded._id).select("-password");
 
           if (!user) {
             throw new Error('User not found');
