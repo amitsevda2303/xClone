@@ -4,9 +4,9 @@ import Feature from './Home/Feature'
 import s from "../Styles/HomePage.module.css"
 import { useQuery ,gql} from '@apollo/client'
 
-const query = gql`
-query GetUserDetails {
-  getdetails {
+const getData = gql`
+query GetUserDetails($token: String!) {
+  getdetails(token: $token) {
     _id
     name
   }
@@ -18,12 +18,10 @@ const HomePage = () => {
   const userToken = localStorage.getItem("User")
 
  
-
-  const { loading, error, data } = useQuery(query, {
-    context: {
-      headers: {
-        token: userToken ? `${userToken}` : '',
-      },
+console.log(userToken)
+  const { loading, error, data } = useQuery(getData, {
+    variables: {
+      token: userToken,
     },
   });
 

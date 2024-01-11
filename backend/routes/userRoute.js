@@ -45,8 +45,9 @@ router.post('/setuserinfo', newUserCheck, async (req, res) => {
                 password: hasedPassword,
                 dob: parsedDob
             })
-            await newUser.save()
+            const savedPerson = await newUser.save()
             const userPayload = {
+                _id: savedPerson._id,
                 email: email,
                 name: name,
                 dob: parsedDob,
@@ -63,8 +64,10 @@ router.post('/setuserinfo', newUserCheck, async (req, res) => {
                 password: hasedPassword,
                 dob: parsedDob
             })
-            await newUser.save()
+            const savedUser = await newUser.save()
+            
             const userPayload = {
+                _id: savedUser._id,
                 mobile:mobile,
                 name: name,
                 dob: parsedDob,

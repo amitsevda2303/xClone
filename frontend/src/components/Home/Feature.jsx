@@ -39,7 +39,7 @@ const Feature = (props) => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <div className={s.icon}><i class="fa-solid fa-house"></i></div>
+                <div className={s.icon}><i className="fa-solid fa-house"></i></div>
                 <span>
                     Home
                 </span>
@@ -47,7 +47,7 @@ const Feature = (props) => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                    <div className={s.icon}> <i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div className={s.icon}> <i className="fa-solid fa-magnifying-glass"></i></div>
                 <span>
                     Explore
                 </span>
@@ -55,7 +55,7 @@ const Feature = (props) => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <div className={s.icon}><i class="fa-solid fa-bell"></i></div>
+                <div className={s.icon}><i className="fa-solid fa-bell"></i></div>
                 <span>
                     Notifications
                 </span>
@@ -63,7 +63,7 @@ const Feature = (props) => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <div className={s.icon}><i class="fa-regular fa-envelope"></i></div>
+                <div className={s.icon}><i className="fa-regular fa-envelope"></i></div>
                 <span>
                     Messages
                 </span>
@@ -71,7 +71,7 @@ const Feature = (props) => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <div className={s.icon}><i class="fa-regular fa-square-check fa-rotate-180"></i></div>
+                <div className={s.icon}><i className="fa-regular fa-square-check fa-rotate-180"></i></div>
                 <span>
                     Grok
                 </span>
@@ -79,7 +79,7 @@ const Feature = (props) => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <div className={s.icon}><i class="fa-regular fa-rectangle-list"></i></div>
+                <div className={s.icon}><i className="fa-regular fa-rectangle-list"></i></div>
                 <span>
                     Lists
                 </span>
@@ -87,7 +87,7 @@ const Feature = (props) => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-               <div className={s.icon}> <i class="fa-regular fa-bookmark"></i></div>                
+               <div className={s.icon}> <i className="fa-regular fa-bookmark"></i></div>                
                 <span>
                     Bookmarks
                 </span>
@@ -95,7 +95,7 @@ const Feature = (props) => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <div className={s.icon}><i class="fa-solid fa-user-group"></i></div>
+                <div className={s.icon}><i className="fa-solid fa-user-group"></i></div>
                 <span>
                     Communities
                 </span>
@@ -103,7 +103,7 @@ const Feature = (props) => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <div className={s.icon}><i class="fa-solid fa-house"></i></div>
+                <div className={s.icon}><i className="fa-solid fa-house"></i></div>
                 <span>
                     Premium
                 </span>
@@ -111,7 +111,7 @@ const Feature = (props) => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <div className={s.icon}><i class="fa-regular fa-user"></i></div>
+                <div className={s.icon}><i className="fa-regular fa-user"></i></div>
                 <span>
                     Profile
                 </span>
@@ -119,7 +119,7 @@ const Feature = (props) => {
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
-                <div className={s.icon}><i class="fa-regular fa-comment-dots"></i></div>
+                <div className={s.icon}><i className="fa-regular fa-comment-dots"></i></div>
                 <span>
                     More
                 </span>
@@ -140,11 +140,11 @@ const Feature = (props) => {
                     <img src={user} alt="" />
                 </div>
                 <div className={s.userDetails}>
-                    <span>{name} &nbsp; &nbsp;<i class="fa-solid fa-lock"></i></span>
+                    <span>{name} &nbsp; &nbsp;<i className="fa-solid fa-lock"></i></span>
                     <span className={s.lightSpan}>@aw43SE$asdasdr</span>
                 </div>
                 <div className={s.threeDot}>
-                <i class="fa-solid fa-ellipsis"></i>
+                <i className="fa-solid fa-ellipsis"></i>
                 </div>
             </div>
         </div>

@@ -1,10 +1,11 @@
 const {ApolloServer} = require("@apollo/server")
 const dotenv = require('dotenv');
 const User = require("../model/User");
+const jwt = require('jsonwebtoken')
 // const { eventNames } = require("../model/User");
 
 dotenv.config()
-const SECERET = process.env.SECERET
+const SECERET = process.env.JWTSECERET
 const server = new ApolloServer({
   typeDefs: `
   type User {
@@ -16,29 +17,30 @@ const server = new ApolloServer({
     password: String!
   }
        type Query{
-        getdetails:User
+        getdetails(token:String):User
        }
     `,
   resolvers: {
     Query: {
-     getdetails:async (_, context)=>{
-       
-       try {
-          const token = req.headers;
-          console.log(context)
+     getdetails:async(_, req) => {
+      try {
+          const {token}=req;
+    console.log(token)
+
           // Verify the token
           const decoded = jwt.verify(token, SECERET);
 
           // Get user details from the database using the decoded user ID
-          const user = await User.findById(decoded.userId);
+          const user = await User.findById(decoded._id);
 
           if (!user) {
-            throw new AuthenticationError('User not found');
+            throw new Error('User not found');
           }
 
           return user;
         } catch (error) {
-          throw new AuthenticationError('Invalid token');
+          console.log(error)
+          throw new Error('Invalid token');
         }
      }
   },}
