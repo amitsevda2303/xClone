@@ -1,24 +1,24 @@
 import React from 'react'
 import s from "../../Styles/Profile.module.css"
 
-const Profile = (props) => 
+const Profile = () => 
 {
-    const {setProfile} = props;
-    const gotoHome =() =>{
-        setProfile(false)
-    }
+    // const {setProfile} = props;
+    // const gotoHome =() =>{
+    //     setProfile(false)
+    // }
   return (
-    <div>
+    <div className={s.HigherDiv}>
         <div className={s.topDiv}>
-            <div className={s.icon}>
-            <i class="fa-solid fa-arrow-left"></i>
+            <div className={s.backButton}>
+            <i className="fa-solid fa-arrow-left"></i>
             </div>
             <div className={s.Name}>
                 <span>Amit</span>
-                <p>0 post</p>
+                <p>0 posts</p>
             </div>
         </div>
-        <button onClick={gotoHome}>back</button>
+        <button className={s.ptn}>back</button>
       hii sir
     </div>
   )

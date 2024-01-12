@@ -7,11 +7,9 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const Feature = (props) => {
+const Feature = () => {
     const [logoutModal, setLogoutModal] = useState(false)
     const navigate = useNavigate()
-    const { name } = props.userDetails;
-    const {setProfile} = props;
   
     const setModalFunc = () =>{
         setLogoutModal(true)
@@ -24,13 +22,9 @@ const Feature = (props) => {
         navigate("/logout")
     }
 
-    const changeHome = () =>{
-        setProfile(true);
-    }
 
     
   return (
-    <div>
         <div className={s.container}>
             <div className={s.image}>
                 <img src={image} alt="X Logo" />
@@ -108,7 +102,7 @@ const Feature = (props) => {
                 </div>
             </div>
             <div className={s.featuresContainer}>
-                <div className={s.feature} onClick={changeHome}>
+                <div className={s.feature} >
                 <div className={s.icon}><i className="fa-regular fa-user"></i></div>
                 <span>
                     Profile
@@ -138,7 +132,7 @@ const Feature = (props) => {
                     <img src={user} alt="" />
                 </div>
                 <div className={s.userDetails}>
-                    <span>{name} &nbsp; &nbsp;<i className="fa-solid fa-lock"></i></span>
+                    <span>Name &nbsp; &nbsp;<i className="fa-solid fa-lock"></i></span>
                     <span className={s.lightSpan}>@aw43SE$asdasdr</span>
                 </div>
                 <div className={s.threeDot}>
@@ -146,8 +140,6 @@ const Feature = (props) => {
                 </div>
             </div>
         </div>
-      
-    </div>
   )
 }
 

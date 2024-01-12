@@ -1,18 +1,94 @@
+
+
 .topDiv{
-    padding-inline: 20px;
-    height: 50px;
-    width: 100%;
+    position: fixed;
+    padding-inline: 10px;
+    height: 65px;
+    width: 35.34%;
     display: flex;
     flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.904);
+    border-bottom: 1px solid rgba(114, 113, 113, 0.394);
 }
 
-.icon{
+/* .icon{
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    width: 20%;
+    align-items: center;
+    width: 35px;
+    height: 50px;
 }
 
 .icon>i{
-    font-size: 20px;
+    font-size: 17px;
+} */
+
+
+
+.backButton{
+    position: relative;
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+  }
+
+  .backButton{
+    text-align: center
+  }
+  .backButton>i{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .backButton:hover{
+    transition: .2s ease-in-out;
+    background-color: rgba(128, 128, 128, 0.307);
+    cursor: pointer;
+  }
+
+  .backButton::after{
+    position: absolute;
+    bottom:  -150%;
+    content: 'Back';
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgba(128, 128, 128, 0.656);
+    padding: 3px;
+    padding-inline: 4px;
+    text-align: center;
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transform: translateY(0); /* Initial position */
+   /* Delay appearance for 1 second */
+  }
+  .backButton:hover::after{
+    letter-spacing: 1px;
+    opacity: 1; /* Make the content visible */
+    transform: translateY(-100%); /* Move the content into view */
+  }
+
+  .Name{
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 70%;
+    padding-left: 20px;
 }
+
+.Name>span{
+    font-size: 24px;
+    font-weight: 700;
+}
+.Name>p{
+    font-size: 16px;
+}
+.ptn{
+    margin-top: 80px;
+}
+
