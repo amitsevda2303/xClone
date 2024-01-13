@@ -3,7 +3,7 @@ import s from "../../Styles/Feature.module.css";
 import image from "../../assets/svg.svg";
 import user from "../../assets/pngegg.png";
 import ClickAwayListener from 'react-click-away-listener';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -32,89 +32,89 @@ const Feature = () => {
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
                 <div className={s.icon}><i className="fa-solid fa-house"></i></div>
-                <span>
+                <Link to="/home">
                     Home
-                </span>
+                </Link>
                 </div>
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
                     <div className={s.icon}> <i className="fa-solid fa-magnifying-glass"></i></div>
-                <span>
+                <Link>
                     Explore
-                </span>
+                </Link>
                 </div>
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
                 <div className={s.icon}><i className="fa-solid fa-bell"></i></div>
-                <span>
+                <Link>
                     Notifications
-                </span>
+                </Link>
                 </div>
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
                 <div className={s.icon}><i className="fa-regular fa-envelope"></i></div>
-                <span>
+                <Link>
                     Messages
-                </span>
+                </Link>
                 </div>
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
                 <div className={s.icon}><i className="fa-regular fa-square-check fa-rotate-180"></i></div>
-                <span>
+                <Link>
                     Grok
-                </span>
+                </Link>
                 </div>
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
                 <div className={s.icon}><i className="fa-regular fa-rectangle-list"></i></div>
-                <span>
+                <Link>
                     Lists
-                </span>
+                </Link>
                 </div>
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
                <div className={s.icon}> <i className="fa-regular fa-bookmark"></i></div>                
-                <span>
+                <Link>
                     Bookmarks
-                </span>
+                </Link>
                 </div>
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
                 <div className={s.icon}><i className="fa-solid fa-user-group"></i></div>
-                <span>
+                <Link>
                     Communities
-                </span>
+                </Link>
                 </div>
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
                 <div className={s.icon}><i className="fa-solid fa-house"></i></div>
-                <span>
+                <Link>
                     Premium
-                </span>
+                </Link>
                 </div>
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature} >
                 <div className={s.icon}><i className="fa-regular fa-user"></i></div>
-                <span>
+                <Link to="/profile">
                     Profile
-                </span>
+                </Link>
                 </div>
             </div>
             <div className={s.featuresContainer}>
                 <div className={s.feature}>
                 <div className={s.icon}><i className="fa-regular fa-comment-dots"></i></div>
-                <span>
+                <Link>
                     More
-                </span>
+                </Link>
                 </div>
             </div>
             <div className={s.PostContainer}>

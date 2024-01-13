@@ -1,4 +1,6 @@
 import React from 'react'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 import s from "../../Styles/Profile.module.css"
 
 const Profile = () => 
@@ -15,10 +17,15 @@ const Profile = () =>
             </div>
             <div className={s.Name}>
                 <span>Amit</span>
-                <p>0 posts</p>
+                <p>0 posts</p>   
             </div>
         </div>
-        <button className={s.ptn}>back</button>
+
+        <div className={s.salt}>
+          <Skeleton width={100} height={100} circle={true}/>
+        </div>
+        
+       
       hii sir
     </div>
   )
